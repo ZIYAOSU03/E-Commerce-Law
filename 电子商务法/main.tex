@@ -1,0 +1,90 @@
+\documentclass[12pt,a4paper]{article}
+
+% 中文支持（格式参考：/Users/Zhuanz/Documents/哈吉馨/AI-Mediation-Paper-main/main.tex）
+% 说明：为避免不同环境缺失 Windows 字体（如 SimSun/SimHei）导致编译失败，
+% 这里使用 TeX Live 常见自带的 Fandol 字体集，保证可移植性。
+\usepackage[UTF8,fontset=fandol]{ctex}
+
+% 页面设置
+\usepackage[top=2.5cm,bottom=2.5cm,left=3cm,right=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing  % 1.5倍行距
+
+% 数学和符号
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% 图表
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% 超链接
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue,
+    citecolor=red
+}
+
+% 参考文献
+\usepackage[style=gb7714-2015,backend=biber]{biblatex}
+\addbibresource{references.bib}
+
+% 其他包
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{从“亮照亮证”到“信息可得”——论电子商务经营者的信息公示义务及其实现路径}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% 标题格式
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% 标题信息（按需自行替换作者信息）
+\title{从“亮照亮证”到“信息可得”——论电子商务经营者的信息公示义务及其实现路径}
+\author{作者姓名}
+\date{\today}
+
+\begin{document}
+
+% 封面
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+% 目录
+\tableofcontents
+\newpage
+
+% 摘要
+\input{chapters/abstract}
+
+% 引言
+\input{chapters/introduction}
+
+% 正文
+\input{chapters/chapter01}
+\input{chapters/chapter02}
+\input{chapters/chapter03}
+\input{chapters/chapter04}
+
+% 结论
+\input{chapters/conclusion}
+
+% 参考文献
+\newpage
+\printbibliography[title=参考文献]
+
+\end{document}
+
+
