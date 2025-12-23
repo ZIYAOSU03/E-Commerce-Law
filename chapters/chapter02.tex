@@ -41,22 +41,23 @@
 \centering
 \caption{电商纠纷中“信息问题”相关成因分布（示意）}
 \label{fig:bar-demo}
-\begin{tikzpicture}
+\begin{tikzpicture}[x=0.3cm,y=0.85cm]
 % 说明：以下为示意性数据，用于课堂论文展示结构性问题，不代表官方统计。
-\draw[->] (0,0) -- (10,0) node[right] {占比（\%）};
-\draw[->] (0,0) -- (0,5) node[above] {类别};
+\draw[->] (0,0) -- (26,0) node[right] {占比（\%）};
+\draw[->] (0,0) -- (0,6) node[above] {类别};
 
-\def\labels{{入口难找,信息不一致,联系方式失效,资质难核验,变更不同步}}
-\def\values{{22,18,20,16,24}}
+% 注意：列表不要额外套一层 {}，否则会被当成单个元素导致排版异常
+\def\labels{入口难找,信息不一致,联系方式失效,资质难核验,变更不同步}
+\def\values{22,18,20,16,24}
 
-\foreach \i [count=\n from 0] in \labels {
-  \node[anchor=east] at (-0.2,4.5-\n*0.9) {\i};
+\foreach \lab [count=\n from 0] in \labels {
+  \node[anchor=east] at (-0.6,5.4-\n) {\lab};
 }
-\foreach \v [count=\n from 0] in \values {
-  \fill[gray!40] (0,4.2-\n*0.9) rectangle (\v/3,4.6-\n*0.9);
-  \node[anchor=west] at (\v/3+0.1,4.4-\n*0.9) {\v};
+\foreach \val [count=\n from 0] in \values {
+  \fill[gray!40] (0,5.15-\n) rectangle (\val,5.65-\n);
+  \node[anchor=west] at (\val+0.4,5.4-\n) {\val};
 }
-\node[anchor=west] at (0, -0.8) {\footnotesize 注：示意性数据，基于公开案例类型归纳，用于说明结构性风险点。};
+\node[anchor=west] at (0, -0.9) {\footnotesize 注：示意性数据，基于公开案例类型归纳，用于说明结构性风险点。};
 \end{tikzpicture}
 \end{figure}
 
